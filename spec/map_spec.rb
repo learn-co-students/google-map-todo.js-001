@@ -12,7 +12,7 @@ describe "Index" do
   end
 
   it "replaces the spinner with the user's longitude in the #longitude div" do
-    sleep(5)
+    sleep(10)
     longitude_html = page.evaluate_script("document.getElementById('longitude').innerHTML.substring(0,6)")
     expect(longitude_html).to eq(location_data["longitude"])
     expect(longitude_html).to_not include(spinner)
